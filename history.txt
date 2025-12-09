@@ -1,0 +1,16 @@
+  319  git push origin main
+  320  echo "# My First Repo" > README.md
+  321  git add README.md
+  322  git commit -m "Add README.md"
+  323  git push origin main
+  324  git checkout -b feature
+  325  echo "This is a feature branch" >> README.md
+  326  echo "# Ignore history files" >> .gitignore
+  327  git add README.md .gitignore
+  328  git commit -m "Update README and gitignore"
+  329  git push origin feature
+  330  git commit --amend -m "Update README and gitignore - ammend"
+  331  git push --force origin feature
+  332  git checkout main
+  333  git merge feature
+  334  git push origin main
